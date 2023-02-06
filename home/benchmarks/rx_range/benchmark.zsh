@@ -43,6 +43,9 @@ function start_monitor_mode() {
 
   echo "Enabling interface"
   sudo ifconfig $INTERFACE up
+
+  echo "Fetching interface info"
+  sudo iw dev $INTERFACE info
 }
 
 function switch_channel() {
